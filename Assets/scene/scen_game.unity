@@ -108,34 +108,6 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &450542041
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 450542042}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: 'empty '
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &450542042
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 450542041}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.9, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1879033664}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &996292307
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,7 +280,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb6153616bda6a344a5232e42e582cbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  empty: {x: 0, y: 0, z: 0}
   cameramove: {x: 0, y: 0, z: 0}
 --- !u!1 &1879033659
 GameObject:
@@ -401,8 +372,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6, y: -2.2307, z: 0}
   m_LocalScale: {x: 1.1803651, y: 1.1803625, z: 1.1803625}
-  m_Children:
-  - {fileID: 450542042}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
