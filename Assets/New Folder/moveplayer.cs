@@ -17,6 +17,7 @@ public class moveplayer : MonoBehaviour {
         if (Input.GetKey(KeyCode.A))
         {
             this.transform.Translate(Vector3.right * -speed * Time.deltaTime);
+            
         }
     }
 }
