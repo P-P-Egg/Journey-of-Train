@@ -6,7 +6,12 @@ using System.IO;
 [System.Serializable]
 public struct SaveData
 {
+    public bool iscounting;                                             //时间增加
     public string time;                                                 //存档时间
+    public int millisecond;
+    public int second;
+    public int minute;
+    public int hour;
     public string name;                                                 //管卡名字
     public float money;                                                 //金钱
     public Vector3 PlayerLocation;                                      //玩家位置
@@ -17,11 +22,7 @@ public struct SaveData
 public static class SaveLoad {
 
     public static SaveData[] savedatas = new SaveData[10];
-    public static SaveData autosave = new SaveData();
-    static void AutoSave()
-    {
-        BinarySerializationTool.Save(autosave, "AV.exe");
-    }
+    public static SaveData currentgame;
     static void Save()
     {
         BinarySerializationTool.Save(savedatas, "AV.mp4");
@@ -29,6 +30,5 @@ public static class SaveLoad {
     static void Load()
     {
         BinarySerializationTool.Load(savedatas, "Av.mp4");
-        BinarySerializationTool.Load(autosave, "AV.exe");
     }
 }
