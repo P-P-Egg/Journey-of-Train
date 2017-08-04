@@ -9,7 +9,7 @@ public class movecamera : MonoBehaviour {
     void Awake()
     {
         player = GameObject.FindWithTag("player").transform;
-        transform.Translate(-5.82f,0.01f,0);
+        transform.position=new Vector3(-6.26f,0,-10f);
         offsetStation = transform.position - player.position;
         
     }
