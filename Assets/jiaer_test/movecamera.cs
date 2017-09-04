@@ -9,14 +9,14 @@ public class movecamera : MonoBehaviour {
     void Awake()
     {
         player = GameObject.FindWithTag("player").transform;
-        transform.position=new Vector3(-6.26f,0,-10f);
+        transform.position=new Vector3(-3.7f,0,-10f);
         offsetStation = transform.position - player.position;
         
     }
     void Update()
     {
         cameramove = GameObject.FindWithTag("player").transform.position;
-        if (cameramove.x > -6 && cameramove.x < 6) 
+        if (cameramove.x > -6 && cameramove.x < 3.7f) 
         {
             transform.position = offsetStation + player.position;
         }
