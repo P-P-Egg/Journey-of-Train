@@ -9,7 +9,7 @@ public class dui_hua : MonoBehaviour {
     private string dui_hua_string10001; 
     public static int dui_hua_int10001 = 0;
 
-    public static int button_int10002;
+    public static int button_int10002 = 0;
 
 
     void Start () {
@@ -18,7 +18,7 @@ public class dui_hua : MonoBehaviour {
 	
 	void Update () {
 
-        dui_hua_10001();
+        //dui_hua_10001();
     }
 
 
@@ -32,7 +32,7 @@ public class dui_hua : MonoBehaviour {
     }
 
 
-    void button_neirong(int id) //储存所有的button内容
+    public void button_neirong(int id) //储存所有的button内容
     {
         if(id == 10002)
         {
@@ -56,8 +56,12 @@ public class dui_hua : MonoBehaviour {
 
     private void button_10002()
     {
-        button_int10002 = 1;
+       
         all_button.Allbutton.enabled = true;
+
+        //button_int10002 = 1;
+
+                
     }
 
 

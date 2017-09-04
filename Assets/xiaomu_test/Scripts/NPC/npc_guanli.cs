@@ -58,12 +58,14 @@ public class npc_guanli : MonoBehaviour {
     {
 
         /*dui_hua duihua = new dui_hua();*/ //以下为实验，成功
-        if (/*Dui_hua_text.enabled && */dui_hua.dui_hua_int10001 == 1) //所有判断手动调整，根据判断给出台词
+        if (/*Dui_hua_text.enabled && */dui_hua.dui_hua_int10001 == 0) //所有判断手动调整，根据判断给出台词
         {
-            text_qiyong(); //这一段出问题了，回家修改
+            text_qiyong(); 
             dui_hua duihua = new dui_hua();
             duihua.duihua_neirong(10001);
         }
+
+
     }
 }
 
