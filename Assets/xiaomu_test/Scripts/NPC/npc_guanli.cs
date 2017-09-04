@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; 
+using UnityEngine.UI;
 
 
 public class npc_guanli : MonoBehaviour {
@@ -18,13 +18,13 @@ public class npc_guanli : MonoBehaviour {
     }
 
 
-	void Start () {
-        
+    void Start() {
+
 
     }
 
-	void Update () {
-        dui_hua_kuang();
+    void Update() {
+        
 
     }
 
@@ -38,21 +38,30 @@ public class npc_guanli : MonoBehaviour {
 
     }
 
+    void text_qiyong() //启用text
+    {
+        Dui_hua_image.enabled = true;
+        Dui_hua_text.enabled = true;
+    }
+
 
     void OnMouseDown() //当鼠标对NPC按下左键时,返回true
     {
         Pos = gameObject.transform.position; // 获取NPC的位置,这是为了让主角靠近NPC
 
-        Dui_hua_image.enabled = true; //启用
-        Dui_hua_text.enabled = true; //启用
-
+        //Dui_hua_image.enabled = true; //启用
+        //Dui_hua_text.enabled = true; //启用
+        dui_hua_kuang();
     }
 
     public void dui_hua_kuang() //判断弹出对话框
     {
-        dui_hua duihua = new dui_hua(); //以下为实验，成功
-        if (Dui_hua_text.enabled && dui_hua.dui_hua_int10001 == 0) //所有判断手动调整，根据判断给出台词
+
+        /*dui_hua duihua = new dui_hua();*/ //以下为实验，成功
+        if (/*Dui_hua_text.enabled && */dui_hua.dui_hua_int10001 == 1) //所有判断手动调整，根据判断给出台词
         {
+            text_qiyong(); //这一段出问题了，回家修改
+            dui_hua duihua = new dui_hua();
             duihua.duihua_neirong(10001);
         }
     }
