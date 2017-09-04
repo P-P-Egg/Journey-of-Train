@@ -5,15 +5,19 @@ using UnityEngine.UI;
 
 public class dui_hua : MonoBehaviour {
 
+    //所有对话内容及判断条件
+
     public static int a = 0; //这两个变量让对话代码可以正常执行
     public static int b = 0;
+
+    public static string npc_name;
 
     public static Image Dui_hua_image { set; get; } //对话框的Image
     public static Text Dui_hua_text { set; get; }
 
     all_dui_hua all_dh = new all_dui_hua(); //实例化all_dui_hua
 
-    npc_guanli npc_gl = new npc_guanli();//实例化npc_guanli
+
 
     void Awake()
     {
@@ -49,9 +53,9 @@ public class dui_hua : MonoBehaviour {
         Dui_hua_text.enabled = true;
     }
 
-    public void dui_hua_kuang()
+    public void dui_hua_kuang() //完全实现对话框的实现
     {
-        if (!bool_dui_hua.kai_guan_dui_hua[0] && npc_gl.npcName == "NPC2" && a > b)
+        if (!bool_dui_hua.kai_guan_dui_hua[0] && npc_name == "NPC1" && a > b)
         {
             b = a;
             text_qiyong();
@@ -59,7 +63,7 @@ public class dui_hua : MonoBehaviour {
             Dui_hua_text.text = all_dh.dh_nr_10000;
         }
 
-        if (bool_dui_hua.kai_guan_dui_hua[0] && npc_gl.npcName == "NPC2" && a > b)
+        if (bool_dui_hua.kai_guan_dui_hua[0] && npc_name == "NPC2" && a > b)
         {
             b = a;
             text_qiyong();

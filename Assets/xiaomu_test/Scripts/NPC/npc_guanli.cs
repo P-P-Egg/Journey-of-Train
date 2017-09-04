@@ -20,7 +20,7 @@ public class npc_guanli : MonoBehaviour {
 
 
     void Start() {
-        npcName = this.gameObject.transform.name;
+        npcName = gameObject.transform.name;
 
     }
 
@@ -30,14 +30,10 @@ public class npc_guanli : MonoBehaviour {
     }
 
 
-
-
-
-
     void OnMouseDown() //当鼠标对NPC按下左键时,返回true
     {
         dui_hua.a++;
-
+        dui_hua.npc_name = npcName;
 
         Pos = gameObject.transform.position; // 获取NPC的位置,这是为了让主角靠近NPC
 
