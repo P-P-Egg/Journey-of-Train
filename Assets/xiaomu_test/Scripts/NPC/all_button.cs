@@ -4,7 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class all_button : MonoBehaviour {
+public class all_button : MonoBehaviour
+{
+
+    public static Canvas Allbutton { set; get; } //一开始是隐藏button的，需要时调用出来
 
     public static Button Button_1 { set; get; }
     public static Button Button_2 { set; get; }
@@ -14,7 +17,6 @@ public class all_button : MonoBehaviour {
     public static Text Button2_text { set; get; }
     public static Text Button3_text { set; get; }
 
-    public static Canvas Allbutton { set; get; } //一开始是隐藏button的，需要时调用出来
 
     void Awake()
     {
@@ -22,14 +24,16 @@ public class all_button : MonoBehaviour {
     }
 
 
-    void Start () {
-		
-	}
-	
+    void Start()
+    {
 
-	void Update () {
-		
-	}
+    }
+
+
+    void Update()
+    {
+
+    }
 
     void chu_shi_hua() //初始化
     {

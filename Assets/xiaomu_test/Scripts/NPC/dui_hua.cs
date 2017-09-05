@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class dui_hua : MonoBehaviour {
+public class dui_hua : MonoBehaviour
+{
 
     //所有对话内容及判断条件
 
@@ -59,7 +60,9 @@ public class dui_hua : MonoBehaviour {
         {
             b = a;
             text_qiyong();
+
             bool_dui_hua.dh_bool_10000();
+
             Dui_hua_text.text = all_dh.dh_nr_10000;
         }
 
@@ -67,12 +70,20 @@ public class dui_hua : MonoBehaviour {
         {
             b = a;
             text_qiyong();
+
             bool_dui_hua.dh_bool_10001();
-            Dui_hua_text.text = all_dh.dh_nr_10001;
+            bool_dui_hua.dh_bool_10002();
+            bool_dui_hua.dh_bool_10003();
+
+            all_button.Allbutton.enabled = true;
+            all_button.Button1_text.text = all_dh.dh_nr_10001;
+            all_button.Button1_text.text = all_dh.dh_nr_10002;
+            all_button.Button1_text.text = all_dh.dh_nr_10003;
+
         }
     }
-                
-    }
+
+}
 
 
 

@@ -2,19 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class dh_button : MonoBehaviour {
+public class dh_button : MonoBehaviour
+{
 
 
 
-	void Start () {
+    void Start()
+    {
 
 
     }
-	
 
-	void Update () {
-		
-	}
+
+    void Update()
+    {
+
+    }
 
     public void OnbuttonDown() //点击对话框，进行下一句，或者退出
     {

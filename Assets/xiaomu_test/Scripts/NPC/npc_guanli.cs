@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class npc_guanli : MonoBehaviour {
+public class npc_guanli : MonoBehaviour
+{
 
     public int Qian { set; get; } //经济状况 
     public Vector3 Pos { set; get; } //NPC自身位置 
@@ -19,13 +20,15 @@ public class npc_guanli : MonoBehaviour {
     }
 
 
-    void Start() {
+    void Start()
+    {
         npcName = gameObject.transform.name;
 
     }
 
-    void Update() {
-        
+    void Update()
+    {
+
 
     }
 
