@@ -77,8 +77,8 @@ public class dui_hua : MonoBehaviour
 
             all_button.Allbutton.enabled = true;
             all_button.Button1_text.text = all_dh.dh_nr_10001;
-            all_button.Button1_text.text = all_dh.dh_nr_10002;
-            all_button.Button1_text.text = all_dh.dh_nr_10003;
+            all_button.Button2_text.text = all_dh.dh_nr_10002;
+            all_button.Button3_text.text = all_dh.dh_nr_10003;
 
         }
     }
