@@ -14,5 +14,9 @@ public class all_dui_hua : MonoBehaviour
 
     public string dh_nr_10003 = "我是10003";
 
+    public string dh_nr_10004 = "我是10004";
+
+    public string dh_nr_10005 = "我是10005";
+
 
 }

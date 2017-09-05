@@ -58,15 +58,32 @@ public class dui_hua : MonoBehaviour
     {
         if (!bool_dui_hua.kai_guan_dui_hua[0] && npc_name == "NPC1" && a > b)
         {
-            b = a;
+            
+            dh_button.dui_hua_next = true;
+
             text_qiyong();
 
             bool_dui_hua.dh_bool_10000();
 
             Dui_hua_text.text = all_dh.dh_nr_10000;
+
+            b = a;
+
+            if (bool_dui_hua.kai_guan_dui_hua[0] && npc_name == "NPC1" && a > b)
+            {
+                bool_dui_hua.dh_bool_10004();
+
+                Dui_hua_text.text = all_dh.dh_nr_10004;
+
+                dh_button.dui_hua_kuang_end = true;
+
+                b = a;
+            }
+
+
         }
 
-        if (bool_dui_hua.kai_guan_dui_hua[0] && npc_name == "NPC2" && a > b)
+        if (bool_dui_hua.kai_guan_dui_hua[4] && npc_name == "NPC2" && a > b)
         {
             b = a;
             text_qiyong();
