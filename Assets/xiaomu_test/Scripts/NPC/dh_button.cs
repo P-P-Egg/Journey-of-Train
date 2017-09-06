@@ -31,15 +31,11 @@ public class dh_button : MonoBehaviour
             dui_hua_kuang_end = false;
         }
 
+
         if (dui_hua_next)
         {
-            dui_hua.Dui_hua_image.enabled = false;
-            dui_hua.Dui_hua_text.enabled = false;
-            
             dui_hua.Dui_hua_image.enabled = true;
-            dui_hua.Dui_hua_text.enabled = true;
-
-            dui_hua.a += 1;
+            dui_hua.Dui_hua_text.enabled = true;          
 
             if (dui_hua_kuang_end)
             {

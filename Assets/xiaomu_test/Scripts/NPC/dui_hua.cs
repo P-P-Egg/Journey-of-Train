@@ -56,32 +56,32 @@ public class dui_hua : MonoBehaviour
 
     public void dui_hua_kuang() //完全实现对话框的实现
     {
-        if (!bool_dui_hua.kai_guan_dui_hua[0] && npc_name == "NPC1" && a > b)
-        {
+        //if (!bool_dui_hua.kai_guan_dui_hua[0] && npc_name == "NPC1" && a > b)
+        //{
             
-            dh_button.dui_hua_next = true;
+        //    dh_button.dui_hua_next = true;
 
-            text_qiyong();
+        //    text_qiyong();
 
-            bool_dui_hua.dh_bool_10000();
+        //    bool_dui_hua.dh_bool_10000();
 
-            Dui_hua_text.text = all_dh.dh_nr_10000;
+        //    Dui_hua_text.text = all_dh.dh_nr_10000;
 
-            b = a;
+        //    b = a;
 
-            if (bool_dui_hua.kai_guan_dui_hua[0] && npc_name == "NPC1" && a > b)
-            {
-                bool_dui_hua.dh_bool_10004();
+        //    if (bool_dui_hua.kai_guan_dui_hua[0] && npc_name == "NPC1" && a > b)
+        //    {
+        //        bool_dui_hua.dh_bool_10004();
 
-                Dui_hua_text.text = all_dh.dh_nr_10004;
+        //        Dui_hua_text.text = all_dh.dh_nr_10004;
 
-                dh_button.dui_hua_kuang_end = true;
+        //        dh_button.dui_hua_kuang_end = true;
 
-                b = a;
-            }
+        //        b = a;
+        //    }
 
 
-        }
+        //}
 
         if (bool_dui_hua.kai_guan_dui_hua[4] && npc_name == "NPC2" && a > b)
         {
@@ -100,7 +100,57 @@ public class dui_hua : MonoBehaviour
         }
     }
 
+
+    public void npc_dui_hua()  //这里重新实现对话框
+    {
+        if(npc_name == "NPC1")
+        {
+            if (!bool_dui_hua.kai_guan_dui_hua[0])
+            {
+                text_qiyong();
+
+                bool_dui_hua.dh_bool_10000();
+
+                Dui_hua_text.text = all_dh.dh_nr_10000;
+            }
+            else
+            {
+                text_qiyong();
+
+                bool_dui_hua.dh_bool_10001();
+
+                Dui_hua_text.text = all_dh.dh_nr_10001;
+            }
+        }
+
+        if (npc_name == "NPC2")
+        {
+            if (bool_dui_hua.kai_guan_dui_hua[0] && !bool_dui_hua.kai_guan_dui_hua[2])
+            {
+                text_qiyong();
+
+                bool_dui_hua.dh_bool_10002();
+
+                Dui_hua_text.text = all_dh.dh_nr_10002;
+
+                return;
+            }
+            if(bool_dui_hua.kai_guan_dui_hua[2] && !bool_dui_hua.kai_guan_dui_hua[3])
+            {
+
+
+
+            }
+
+
+        }
+    }
+
 }
+
+
+
+
 
 
 

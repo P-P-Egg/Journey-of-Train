@@ -14,6 +14,8 @@ public class npc_guanli : MonoBehaviour
 
     public string npcName; //取得自身名字
 
+    public static bool chong_fu_dui_hua = true; //该NPC被鼠标点击后重复说的话
+
     void Awake()
     {
 
@@ -41,6 +43,11 @@ public class npc_guanli : MonoBehaviour
         Pos = gameObject.transform.position; // 获取NPC的位置,这是为了让主角靠近NPC
 
         duihua.dui_hua_kuang(); //进行对话
+
+        if (chong_fu_dui_hua)
+        {
+
+        }
 
     }
 
