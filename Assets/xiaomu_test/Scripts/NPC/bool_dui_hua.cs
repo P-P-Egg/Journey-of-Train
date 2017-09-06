@@ -6,37 +6,9 @@ using UnityEngine;
 public class bool_dui_hua : MonoBehaviour {
 
 
-    public static bool[] kai_guan_dui_hua = new bool[10000];
+    public static bool[] bool_dh = new bool[10000];
 
-    public static void dh_bool_10000()
-    {
-        kai_guan_dui_hua[0] = true;
-    }
 
-    public static void dh_bool_10001()
-    {
-        kai_guan_dui_hua[1] = true;
-    }
-
-    public static void dh_bool_10002()
-    {
-        kai_guan_dui_hua[2] = true;
-    }
-
-    public static void dh_bool_10003()
-    {
-        kai_guan_dui_hua[3] = true;
-    }
-
-    public static void dh_bool_10004()
-    {
-        kai_guan_dui_hua[4] = true;
-    }
-
-    public static void dh_bool_10005()
-    {
-        kai_guan_dui_hua[5] = true;
-    }
 
 
 
