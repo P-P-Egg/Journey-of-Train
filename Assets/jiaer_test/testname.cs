@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class testname : MonoBehaviour {
 
 	// Use this for initialization
@@ -16,6 +16,10 @@ public class testname : MonoBehaviour {
 
     private void OnMouseOver()
     {
-        GameObject.Find("Canvas/Xiaomu").GetComponent<TextMesh>().text = "小木";
+        GameObject.Find("Canvas/Xiaomu").GetComponent<Text>().text = "小木";
+    }
+    private void OnMouseExit()
+    {
+        GameObject.Find("Canvas/Xiaomu").GetComponent<Text>().text = "";
     }
 }
