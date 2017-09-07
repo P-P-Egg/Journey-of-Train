@@ -26,6 +26,10 @@ public class dui_hua : MonoBehaviour
     public static Text Button2_text { set; get; }
     public static Text Button3_text { set; get; }
 
+    public static bool bt_bool_1;
+    public static bool bt_bool_2;
+    public static bool bt_bool_3;
+
 
     all_dui_hua all_dh = new all_dui_hua(); //实例化all_dui_hua
 
@@ -80,6 +84,22 @@ public class dui_hua : MonoBehaviour
 
     }
 
+    public void OnButton_1()  //这3个button被点击后返回true
+    {
+        bt_bool_1 = true;
+    }
+
+
+    public void OnButton_2() //这3个button被点击后返回true
+    {
+        bt_bool_2 = true;
+    }
+
+    public void OnButton_3() //这3个button被点击后返回true
+    {
+        bt_bool_3 = true;
+    }
+
 
     void text_open() //启用text
     {
@@ -98,12 +118,12 @@ public class dui_hua : MonoBehaviour
         Allbutton.enabled = true;
     }
 
-    void button_shut()
+    void button_shut() //关闭button
     {
         Allbutton.enabled = false;
     }
 
-    void all_shut()
+    void all_shut() //关闭button 和 text
     {
         text_shut();
         button_shut();
@@ -120,12 +140,9 @@ public class dui_hua : MonoBehaviour
         dh_button.dui_hua_next = true;
     }
 
-
-
-
-    public void npc_dui_hua()  //这里重新实现对话框
+    public void npc_dui_hua()  //这里重新实现对话框,到时候还要加弹出对话框后，不能点击其它东西
     {
-        if(npc_name == "NPC1")
+        if (npc_name == "NPC1")
         {
             if (!bool_dui_hua.bool_dh[0])
             {
@@ -182,27 +199,41 @@ public class dui_hua : MonoBehaviour
                 Button2_text.text = all_dh.dh_nr_10004;
                 Button3_text.text = all_dh.dh_nr_10005;
 
-                Button_1.onClick.AddListener(all_shut);
-                Button_2.onClick.AddListener(npc_dui_hua);
-                Button_3.onClick.AddListener(npc_dui_hua);
-                               
+
+                //以下逻辑问题不大 主要是没有执行其代码
+                if(bt_bool_1)
+                {
+                    all_shut();
+
+                    bt_bool_1 = false;
+                }
+
+                if (bt_bool_2)
+                {
+                    button_shut();
+
+                    dh_kuang_end();
+
+                    bool_dui_hua.bool_dh[6] = true;
+
+                    Dui_hua_text.text = all_dh.dh_nr_10006;
+
+                    bt_bool_2 = false;
+                }
+
+                if (bt_bool_3)
+                {
+                    Button1_text.text = all_dh.dh_nr_10000;
+                    Button2_text.text = all_dh.dh_nr_10001;
+                    Button3_text.text = all_dh.dh_nr_10002;
+
+                    bt_bool_3 = false;
+                }
+
             }
-
-
-
 
         }
     }
 
 
-
 }
-
-
-
-
-
-
-
-
-
