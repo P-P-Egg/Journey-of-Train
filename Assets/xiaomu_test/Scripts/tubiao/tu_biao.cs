@@ -7,7 +7,8 @@ using System.Timers;
 public class tu_biao : MonoBehaviour {
 
     public static Slider workSlider;
-    private float value_js = 0;
+
+    public static float value_js = 0;
 
     void Awake()
     {
@@ -37,9 +38,8 @@ public class tu_biao : MonoBehaviour {
         workSlider.value = value_js;
         if(value_js <= 1)
         {
-            value_js += 0.001f;
+            value_js += 0.005f;
         }
-
         
     }
 }

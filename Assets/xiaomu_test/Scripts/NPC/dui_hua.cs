@@ -229,7 +229,6 @@ public class dui_hua : MonoBehaviour
 
                     bt_bool_3 = false;
                 }
-
             }
 
         }
