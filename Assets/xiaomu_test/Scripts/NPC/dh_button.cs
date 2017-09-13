@@ -8,6 +8,7 @@ public class dh_button : MonoBehaviour
     public static bool dui_hua_next = false;
     public static bool dui_hua_kuang_end = false;
 
+    dui_hua duihua = new dui_hua();
 
     void Start()
     {
@@ -29,17 +30,13 @@ public class dh_button : MonoBehaviour
             dui_hua.Dui_hua_text.enabled = false;
 
             dui_hua_kuang_end = false;
+
         }
+
 
         if (dui_hua_next)
         {
-            dui_hua.Dui_hua_image.enabled = false;
-            dui_hua.Dui_hua_text.enabled = false;
-            
-            dui_hua.Dui_hua_image.enabled = true;
-            dui_hua.Dui_hua_text.enabled = true;
-
-            dui_hua.a += 1;
+            duihua.npc_dui_hua();        
 
             if (dui_hua_kuang_end)
             {
