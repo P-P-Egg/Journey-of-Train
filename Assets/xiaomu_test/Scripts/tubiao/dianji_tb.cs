@@ -2,23 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Threading;
+using UnityEngine.UI;
 
 public class dianji_tb : MonoBehaviour {
 
-    private GameObject tubiao_1;
-    private Animation tibiao_a_1;
+    public static bool name_xiao_hui = false; //销毁
 
-    public static bool all_xiao_hui = false;
 
-    public RuntimeAnimatorController controller;
-
-    public GameObject qian;
-    private GameObject qian_fu;
+    public RuntimeAnimatorController name_controller; //物体动画
 
 
     // Use this for initialization
     void Start () {
-        tubiao_1 = this.gameObject;
 
 
     }
@@ -33,9 +28,9 @@ public class dianji_tb : MonoBehaviour {
     void dong_hua()
     {
 
-        if (tu_biao.value_js >= 1)
+        if (cai_bei_c.value_js >= 1)
         {
-            gameObject.GetComponent<Animator>().runtimeAnimatorController = controller;
+            gameObject.GetComponent<Animator>().runtimeAnimatorController = name_controller;
         }
 
     }
@@ -43,11 +38,9 @@ public class dianji_tb : MonoBehaviour {
 
     void OnMouseDown()
     {
-        if(tu_biao.value_js >= 1)
+        if(cai_bei_c.value_js >= 1)
         {
-            Destroy(gameObject);
-            all_xiao_hui = true;
-            GameObject go = GameObject.Instantiate(qian, new Vector3(0, 0, 0), Quaternion.identity);
+            name_xiao_hui = true;
             //Destroy(go);
 
 
