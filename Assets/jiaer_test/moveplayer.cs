@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class moveplayer : MonoBehaviour {
+public class moveplayer : jiagou {
 
 	void Update () {
         playermove();

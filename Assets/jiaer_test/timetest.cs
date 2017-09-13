@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class timetest : MonoBehaviour {
+public class timetest : jiagou {
     public float times;
     public int a = 0;
 	// Use this for initialization

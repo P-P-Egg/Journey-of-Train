@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class movecamera : MonoBehaviour {
+public class movecamera : jiagou{
     private Transform player;
     private Vector3 offsetStation;
     public Vector3 cameramove;
@@ -15,7 +15,7 @@ public class movecamera : MonoBehaviour {
     void Update()
     {
         cameramove = GameObject.FindWithTag("player").transform.position;
-        if (cameramove.x > -8.26f && cameramove.x < 8.26f) 
+        if (cameramove.x >= -7.0f && cameramove.x <= 7.0f) 
         {
             transform.position = offsetStation + player.position;
         }
