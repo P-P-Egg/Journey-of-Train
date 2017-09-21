@@ -2,55 +2,58 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Threading;
+using UnityEngine.UI;
 
 public class dianji_tb : MonoBehaviour {
 
-    private GameObject tubiao_1;
-    private Animation tibiao_a_1;
+    public static bool name_xiao_hui = false; //销毁
 
-    public static bool all_xiao_hui = false;
+    private Vector2 ui_weizhi; //自身UI的位置
 
-    public RuntimeAnimatorController controller;
-
-    public GameObject qian;
-    private GameObject qian_fu;
+    public RuntimeAnimatorController name_controller; //物体动画
 
 
     // Use this for initialization
     void Start () {
-        tubiao_1 = this.gameObject;
 
 
     }
 	
 	// Update is called once per frame
 	void Update () {
-        dong_hua();
+        ui_weizhi = gameObject.transform.position;
 
+
+        Dong_hua();
+        Other_xiao_hui();
 
     }
 
-    void dong_hua()
+    void Dong_hua()
     {
 
-        if (tu_biao.value_js >= 1)
+        if (cai_bei_c.value_js >= 1)
         {
-            gameObject.GetComponent<Animator>().runtimeAnimatorController = controller;
+            gameObject.GetComponent<Animator>().runtimeAnimatorController = name_controller;
         }
 
     }
 
-
-    void OnMouseDown()
+     
+    void OnMouseDown()  //点击后销毁
     {
-        if(tu_biao.value_js >= 1)
+        if(cai_bei_c.value_js >= 1)
         {
-            Destroy(gameObject);
-            all_xiao_hui = true;
-            GameObject go = GameObject.Instantiate(qian, new Vector3(0, 0, 0), Quaternion.identity);
+            name_xiao_hui = true;
             //Destroy(go);
+        }
+    }
 
-
+    void Other_xiao_hui() //其它的销毁方式
+    {
+        if(cai_bei_c.value_js >= 1 && ui_weizhi.x - newnpc.npc_weizhi.x < 1)
+        {
+            name_xiao_hui = true;
         }
     }
 
