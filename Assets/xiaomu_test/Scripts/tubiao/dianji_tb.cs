@@ -12,10 +12,8 @@ public class dianji_tb : MonoBehaviour {
 
     public RuntimeAnimatorController name_controller; //物体动画
 
-
     // Use this for initialization
     void Start () {
-
 
     }
 	
@@ -51,7 +49,7 @@ public class dianji_tb : MonoBehaviour {
 
     void Other_xiao_hui() //其它的销毁方式
     {
-        if(cai_bei_c.value_js >= 1 && ui_weizhi.x - newnpc.npc_weizhi.x < 1)
+        if(cai_bei_c.value_js >= 1 && ui_weizhi.x - newnpc.npcName_weizhi.x < 1)
         {
             name_xiao_hui = true;
         }
