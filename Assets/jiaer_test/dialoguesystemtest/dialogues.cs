@@ -17,11 +17,10 @@ public class dialogues : jiagou {
     private string content;
     // Use this for initialization
     void Start(){
-        text = GameObject.Find("Canvas/text");
+        text = GameObject.Find("Canvas/Text");
         XmlDocument xmlDocument = new XmlDocument();
-        text.SetActive(false);
         dialogues_list = new List<string>();
-        string data = Resources.Load("dialogues").ToString();
+        string data = Resources.Load("dialoguedata").ToString();
         xmlDocument.LoadXml(data);   
         XmlNodeList xmlNodeList = xmlDocument.SelectSingleNode("game").ChildNodes;
         foreach (XmlNode xmlNode in xmlNodeList) 
@@ -54,5 +53,6 @@ public class dialogues : jiagou {
         cantalk = XmlConvert.ToBoolean(role_detail_array[2]);
         istalk = XmlConvert.ToBoolean(role_detail_array[3]);
         content = role_detail_array[4];
-        
+        text.GetComponent<Text>().text = content;
+    }    
 }

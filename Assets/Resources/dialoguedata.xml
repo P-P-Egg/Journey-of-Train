@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<game>
+	<dialogue>
+		<ID>10000</ID>
+		<NPC>加二</NPC>
+		<cantalk>true</cantalk>
+		<istalk>false</istalk>
+		<content>你好，我是加二，你叫什么名字</content>
+	</dialogue>
+	<dialogue>
+		<ID>10001</ID>
+		<NPC>小木</NPC>
+		<cantalk>false</cantalk>
+		<istalk>false</istalk>
+		<content>我叫小木，很高兴认识你</content>
+	</dialogue>
+	<dialogue>
+    <ID>10002</ID>
+<NPC>加二</NPC><cantalk>false</cantalk><istalk>true</istalk><content>你好你好</content></dialogue><dialogue><ID>10003</ID><NPC></NPC><cantalk></cantalk><istalk></istalk><content></content></dialogue><dialogue><ID></ID><NPC></NPC><cantalk></cantalk><istalk></istalk><content></content></dialogue><dialogue><ID></ID><NPC></NPC><cantalk></cantalk><istalk></istalk><content></content></dialogue><dialogue><ID></ID><NPC></NPC><cantalk></cantalk><istalk></istalk><content></content></dialogue><dialogue><ID></ID><NPC></NPC><cantalk></cantalk><istalk></istalk><content></content></dialogue><dialogue><ID></ID><NPC></NPC><cantalk></cantalk><istalk></istalk><content></content></dialogue><dialogue><ID></ID><NPC></NPC><cantalk></cantalk><istalk></istalk><content></content></dialogue></game>
