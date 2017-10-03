@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class wu_ping : MonoBehaviour {
-
+public class hehe : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -16,8 +15,8 @@ public class wu_ping : MonoBehaviour {
 	}
 
     void OnMouseDown()
-    {        
-        bei_bao.wuping_name = this.name; //点击物品后，让变量name等于其名字
+    {
+        bei_bao.shanchu_name = this.name; //点击物品后，让变量name等于其名字
+        bei_bao.shanchu_cishu = 1;
     }
-
 }

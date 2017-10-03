@@ -4,65 +4,121 @@ using UnityEngine;
 
 public class bei_bao : MonoBehaviour {
 
-    public static string wuping_name;
+    public static string wuping_name;  //点击物品后获得的name
 
+    public static string shanchu_name; //点击物品后删除的名字
+    public static int shanchu_cishu = 0; //点击物品后删除的次数
 
-
-    public GameObject k_1;
-    public GameObject k_2;
-    public GameObject k_3;
-    public GameObject k_4;
-
-    public SpriteRenderer k_1_sp;
+    public SpriteRenderer k_1_sp;  //物品栏
     public SpriteRenderer k_2_sp;
     public SpriteRenderer k_3_sp;
     public SpriteRenderer k_4_sp;
 
-    List<Sprite> k_t_list = new List<Sprite>(); //框的图片list
+    List<SpriteRenderer> k_t_list = new List<SpriteRenderer>(); //框的图片list
 
 
     public Sprite mao_1; //取得帽子1
     public Sprite mao_2; //取得帽子2
     public Sprite mao_3; //取得帽子3
-
+    
 
     void Start () {
-
-
+        suibian();
 
     }
 	
 	void Update () {
-        fu_zhi();
-
-
-    }
-
-    void suibian()
-    {
-        Sprite[] k_sp = { k_1_sp.sprite, k_2_sp.sprite, k_3_sp.sprite, k_4_sp.sprite };
-        k_t_list.AddRange(k_sp); //将几个框的sprit组件放入list
-    }
-
-    void fu_zhi()
-    {
-
-        if(wuping_name == "mao1")
+        if(wuping_name != null)
         {
-            k_1_sp.sprite = mao_1;
-            wuping_name = null;
-            Debug.Log(wuping_name);
+            fang_bei_bao();
+        }
+
+        if(shanchu_name != null)
+        {
+            shan_chu();
+        }
+       
+
+
+
+    }
+
+    void suibian() //初始化
+    {
+        
+        k_t_list.Add(k_1_sp); 
+        k_t_list.Add(k_2_sp);
+        k_t_list.Add(k_3_sp);
+        k_t_list.Add(k_4_sp);
+
+    }
+
+
+    void fang_bei_bao() //将点击的物体放进背包
+    {
+        Sprite sp = null;
+        if (wuping_name == "mao1") //根据变量name，为物品栏赋值
+        {
+            sp = mao_1;
         }
         if (wuping_name == "mao2")
         {
-            wuping_name = null;
+            sp = mao_2;
+
         }
         if (wuping_name == "mao3")
         {
-            wuping_name = null;
+            sp = mao_3;
         }
 
+        wuping_name = null;
 
+        for (int i = 0; i < k_t_list.Count;i++) //将点击物品的图片实例化进入背包
+        {
 
+            if (k_t_list[i].sprite == null)
+            {
+                k_t_list[i].sprite = sp;
+                break;                
+            }
+        }
     }
+
+    void shan_chu() //将物品删除
+    {
+
+        if(shanchu_name == "mao1_JB") //判断需要删除的物品
+        {
+            int 拥有数 = 0;
+
+            for (int i = 0; i < k_t_list.Count; i++) //判断需要删除物品是否足够
+            {
+                if (k_t_list[i].sprite == mao_1)
+                {
+                    拥有数++;
+                }
+            }
+
+            if(拥有数 >= shanchu_cishu) //物品足够开始进行删除
+            {
+                for (int i = 0; i < k_t_list.Count; i++)
+                {
+                    if (k_t_list[i].sprite == mao_1)
+                    {
+                        k_t_list[i].sprite = null;
+                        shanchu_cishu --;
+                        if(shanchu_cishu == 0)
+                        {
+                            break;
+                        }
+                    }
+                }
+            }
+                        
+            shanchu_name = null;
+
+        }
+            
+    }
+
 }
