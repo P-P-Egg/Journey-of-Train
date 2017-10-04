@@ -36,12 +36,15 @@ public class bei_bao : MonoBehaviour {
         if(shanchu_name != null)
         {
             shan_chu();
-        }
-       
+        }       
+    }
 
-
+    void OnMouseDown()
+    {
 
     }
+
+
 
     void suibian() //初始化
     {
