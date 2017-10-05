@@ -17,6 +17,5 @@ public class hehe : MonoBehaviour {
     void OnMouseDown()
     {
         bei_bao.shanchu_name = this.name; //点击物品后，让变量name等于其名字
-        bei_bao.shanchu_cishu = 1;
     }
 }
