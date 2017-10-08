@@ -56,11 +56,11 @@ public class npc_yidong : MonoBehaviour {
         //Debug.Log(a);
         //Debug.Log(b);
 
-        if(a - b > 1f) //这里条件肯定还要改的
+        if(a - b > 0.2f) //这里条件肯定还要改的
         {
             animator.SetTrigger("zhujue_right");
         }
-        if(a - b < 0.7f)
+        if(a - b < 0.1f)
         {
             animator.SetTrigger("zhujue_idle");
         }
