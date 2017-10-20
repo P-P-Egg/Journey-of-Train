@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Xml;
 using System.Collections.Generic;
+using System;
 
 public class dialogues : jiagou {
     private GameObject text;
@@ -12,6 +13,8 @@ public class dialogues : jiagou {
 
     private string ID;
     private string NPC;
+    public enum Attribute{ dia, cho }
+    private Attribute att;
     private bool cantalk;
     private bool istalk;
     private string content;
@@ -26,7 +29,7 @@ public class dialogues : jiagou {
         foreach (XmlNode xmlNode in xmlNodeList) 
         {
             XmlElement xmlElement = (XmlElement)xmlNode;    
-            dialogues_list.Add(xmlElement.ChildNodes.Item(0).InnerText + "," + xmlElement.ChildNodes.Item(1).InnerText + "," + xmlElement.ChildNodes.Item(2).InnerText + "," + xmlElement.ChildNodes.Item(3).InnerText + "," + xmlElement.ChildNodes.Item(4).InnerText);
+            dialogues_list.Add(xmlElement.ChildNodes.Item(0).InnerText + "," + xmlElement.ChildNodes.Item(1).InnerText + "," + xmlElement.ChildNodes.Item(2).InnerText + "," + xmlElement.ChildNodes.Item(3).InnerText + "," + xmlElement.ChildNodes.Item(4).InnerText+","+ xmlElement.ChildNodes.Item(5).InnerText);
         }
         dialogue_count = dialogues_list.Count; 
         dialogues_handle(0);
@@ -50,9 +53,10 @@ public class dialogues : jiagou {
         string[] role_detail_array = dialogues_list[dialogue_index].Split(',');//list中每一个对话格式就是“角色名,对话”  
         ID = role_detail_array[0];
         NPC = role_detail_array[1];
-        cantalk = XmlConvert.ToBoolean(role_detail_array[2]);
-        istalk = XmlConvert.ToBoolean(role_detail_array[3]);
-        content = role_detail_array[4];
+        att = (Attribute)Enum.Parse(typeof(Attribute), role_detail_array[2]);
+        cantalk = XmlConvert.ToBoolean(role_detail_array[3]);
+        istalk = XmlConvert.ToBoolean(role_detail_array[4]);
+        content = role_detail_array[5];
         text.GetComponent<Text>().text = content;
     }    
 }

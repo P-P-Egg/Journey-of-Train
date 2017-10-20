@@ -52,6 +52,8 @@ public class jiagou : MonoBehaviour {
             example2.isTalk = true;
         }
     }
+
+    public enum attribute { dia,cho}//对话或选项
 }
 
 
