@@ -6,8 +6,10 @@ using UnityEngine.EventSystems;
 
 public class zhujue_yidong : MonoBehaviour {
 
-
     public static Vector3 dian_pos; //点击后鼠标的世界坐标
+
+    public AudioSource zhu_jue_sy; //音效
+
     private Vector3 screenPos; //屏幕坐标
 
     public Vector3 jue_se_pos; //角色自身
@@ -28,8 +30,6 @@ public class zhujue_yidong : MonoBehaviour {
 
     private Vector3 jue_se_cha;//位置差
 
-
-
     private Vector3 dian2;
     private Vector3 dian3;
 
@@ -45,25 +45,13 @@ public class zhujue_yidong : MonoBehaviour {
 
 	void Update () {
 
+       
+
         if (Time.timeScale != 0)
         {
             yidong();
             Animation();
         }
-        //else                   
-        //{
-        //    if (right)
-        //    {
-        //        animator.SetTrigger("zj_right");
-        //    }
-        //    if (left)
-        //    {
-        //        animator.SetTrigger("zj_left");
-        //    }
-            
-        //}
-
-        //jue_se_sca = transform.localScale;
         jue_se_pos = transform.position;
         if (jue_se_oldpos == Vector3.zero)
         {
@@ -74,24 +62,17 @@ public class zhujue_yidong : MonoBehaviour {
             jue_se_cha = jue_se_pos - jue_se_oldpos;
         }
         jue_se_oldpos = jue_se_pos;
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            zhu_jue_sy.Play(); //主角脚步声
+        }
     }
 
      
     void Animation()  //动画
     {
 
-
-        //if (Input.GetMouseButtonDown(0) /*&& !EventSystem.current.IsPointerOverGameObject()*/) //鼠标点击位置
-        //{
-        //    dian2 = Input.mousePosition;
-        //    dian3 = Camera.main.ScreenToWorldPoint(dian2);
-        //}
-
-        //float a = System.Math.Abs(dian3.x);  //鼠标点击位置的世界坐标的取绝对值
-        //float b = System.Math.Abs(transform.position.x); //角色世界坐标的绝对值
-
-        //float a1 = dian3.x;
-        //float b2 = transform.position.x;
         if (right)
         {
             if (jue_se_cha.x != 0)
@@ -101,6 +82,8 @@ public class zhujue_yidong : MonoBehaviour {
             else
             {
                 animator.SetTrigger("zj_right");
+
+                zhu_jue_sy.Stop(); //脚步声停止
             }
         }
         if (left)
@@ -112,6 +95,8 @@ public class zhujue_yidong : MonoBehaviour {
             else
             {
                 animator.SetTrigger("zj_left");
+
+                zhu_jue_sy.Stop(); //脚步声停止
             }
         }
 
@@ -123,6 +108,8 @@ public class zhujue_yidong : MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(0)/* && !EventSystem.current.IsPointerOverGameObject()*/)  //鼠标点击后，获取鼠标位置
         {
+      
+       
 
             Vector3 dianV = Input.mousePosition;
             dianV.z = screenPos.z;
@@ -139,7 +126,10 @@ public class zhujue_yidong : MonoBehaviour {
         {
             if (dian_pos.x - transform.position.x > 0.2f)  //如果点击的位置大于角色位置
             {
+                
                 transform.Translate(Vector3.right * Time.deltaTime * jue_se_speed, Space.World);
+
+                
                 right = true;
                 left = false;
             }
@@ -147,24 +137,12 @@ public class zhujue_yidong : MonoBehaviour {
             if (dian_pos.x - transform.position.x < 0) //如果点击位置小于角色位置
             {
                 transform.Translate(Vector3.left * Time.deltaTime * jue_se_speed, Space.World);
+
+                
                 right = false;
                 left = true;
             }
         }
-
-        //反转
-        //if (dian_pos.x - jue_se_pos2.x > 0 && jue_se_sca.x < 0)
-        //{
-        //    Vector3 jue_se_sca2 = jue_se_sca;
-        //    jue_se_sca2.x = -jue_se_sca2.x;
-        //    transform.localScale = jue_se_sca2;
-        //}
-        //if (dian_pos.x - jue_se_pos2.x < 0 && jue_se_sca.x > 0)
-        //{
-        //    Vector3 jue_se_sca2 = jue_se_sca;
-        //    jue_se_sca2.x = -jue_se_sca2.x;
-        //    transform.localScale = jue_se_sca2;
-        //}
 
     }
 }
