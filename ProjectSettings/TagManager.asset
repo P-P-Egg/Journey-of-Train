@@ -6,6 +6,7 @@ TagManager:
   tags:
   - tubiao
   - npc
+  - boxlight
   layers:
   - Default
   - TransparentFX
