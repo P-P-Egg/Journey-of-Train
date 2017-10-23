@@ -16,7 +16,7 @@ public class zhujue_yidong : MonoBehaviour {
 
     private Vector3 velocity = Vector3.zero; //没什么用的
 
-    private float jue_se_speed = 6; //角色移动速度
+    public float jue_se_speed = 4.5f; //角色移动速度
 
     private Animator animator; //动画
 
