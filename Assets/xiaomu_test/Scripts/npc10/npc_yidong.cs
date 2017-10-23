@@ -70,7 +70,7 @@ public class npc_yidong : MonoBehaviour {
     void Animation()
     {
 
-        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject()) //鼠标点击位置
+        if (Input.GetMouseButtonDown(0)) //&& !EventSystem.current.IsPointerOverGameObject()) //鼠标点击位置
         {
             dian2 = Input.mousePosition;
             dian3 = Camera.main.ScreenToWorldPoint(dian2);
@@ -103,7 +103,7 @@ public class npc_yidong : MonoBehaviour {
     void yidong()
     {
 
-        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())  //鼠标点击后，获取鼠标位置
+        if (Input.GetMouseButtonDown(0)) //&& !EventSystem.current.IsPointerOverGameObject())  //鼠标点击后，获取鼠标位置
         {
 
             Vector3 dianV = Input.mousePosition;
