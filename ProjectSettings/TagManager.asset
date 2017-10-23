@@ -7,6 +7,7 @@ TagManager:
   - tubiao
   - npc
   - boxlight
+  - dialogue
   layers:
   - Default
   - TransparentFX
