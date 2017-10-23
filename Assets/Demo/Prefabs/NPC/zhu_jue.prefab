@@ -70,6 +70,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3c4f4d44dc7041488e60cae1210fd33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dian_pos: {x: 0, y: 0, z: 0}
+  jue_se_pos: {x: 0, y: 0, z: 0}
   left: 0
   right: 0
 --- !u!212 &212620868361751074

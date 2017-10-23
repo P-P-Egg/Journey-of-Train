@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 public class zhujue_yidong : MonoBehaviour {
 
 
-    public  Vector3 dian_pos; //点击后鼠标的世界坐标
+    public static Vector3 dian_pos; //点击后鼠标的世界坐标
     private Vector3 screenPos; //屏幕坐标
 
     public Vector3 jue_se_pos; //角色自身
