@@ -8,11 +8,11 @@ public class talk1_nr : MonoBehaviour {
 
 	void Start () {
         text1 = gameObject.GetComponentInChildren<TextMesh>();
-
+        fuzhi();
     }
 	
 	void Update () {
-        fuzhi();
+        
         xiao_hui();
 
     }
@@ -49,38 +49,54 @@ public class talk1_nr : MonoBehaviour {
         
         if (manager.talk1_id == 10000)
         {
-            text1.text = "哇..你是我见过最没钱的乘务员，你是怎么做到的？";
+            text1.text = "哇.你是我见过最没钱的乘\n务员，你是怎么做到的？";
         }
 
         if (manager.talk1_id == 10001)
         {
-            text1.text = "多学学你的前辈，他们很擅长把人丢进监狱。";
+            text1.text = "多学学你的前辈，他们很\n擅长把人丢进监狱。";
         }
 
         if (manager.talk1_id == 10002)
         {
-            text1.text = "我们家小孩失联好几周了，这是他的照片，你见过的话一定要告诉我。";
+            text1.text = "我们家小孩失联好几周了，\n这是他的照片。";
         }
 
         if (manager.talk1_id == 10003)
         {
-            text1.text = "又是失联？这几天遇到好几个找小孩的，你们都不报警啊。";
+            text1.text = "你见过的话一定要告诉我。";
         }
-
+                    
         if (manager.talk1_id == 10004)
         {
-            text1.text = "怎么没报警，警察一直说等消息，我们不能干等啊。";
+            text1.text = "又是失联？遇到好几个找\n小孩的，你们都不报警啊。";
         }
 
         if (manager.talk1_id == 10005)
         {
-            text1.text = "成吧，有没有备份的照片，给我一张。";
+            text1.text = "怎么没报警，警察一直说\n等消息，我们不能干等啊。";
         }
 
         if (manager.talk1_id == 10006)
         {
+            text1.text = "成吧，有没有备份的照片，\n给我一张。";
+        }
+
+        if (manager.talk1_id == 10007)
+        {
             text1.text = "有的，谢谢了。";
         }
+
+        if (manager.talk1_id == 10008)
+        {
+            text1.text = "新来的，看报纸了吗？金\n毛又在讲笑话。";
+        }
+
+        if (manager.talk1_id == 10009)
+        {
+            text1.text = "少他妈假装听不懂。";
+        }
+
     }
 
 }

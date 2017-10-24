@@ -45,28 +45,31 @@ public class zhujue_yidong : MonoBehaviour {
 
 	void Update () {
 
-       
 
-        if (Time.timeScale != 0)
+        if (manager.talk1_bool_js)
         {
-            yidong();
-            Animation();
-        }
-        jue_se_pos = transform.position;
-        if (jue_se_oldpos == Vector3.zero)
-        {
-            //什么也不干
-        }
-        else
-        {
-            jue_se_cha = jue_se_pos - jue_se_oldpos;
-        }
-        jue_se_oldpos = jue_se_pos;
+            if (Time.timeScale != 0)
+            {
+                yidong();
+                Animation();
+            }
+            jue_se_pos = transform.position;
+            if (jue_se_oldpos == Vector3.zero)
+            {
+                //什么也不干
+            }
+            else
+            {
+                jue_se_cha = jue_se_pos - jue_se_oldpos;
+            }
+            jue_se_oldpos = jue_se_pos;
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            zhu_jue_sy.Play(); //主角脚步声
+            if (Input.GetMouseButtonDown(0))
+            {
+                zhu_jue_sy.Play(); //主角脚步声
+            }
         }
+
     }
 
      
