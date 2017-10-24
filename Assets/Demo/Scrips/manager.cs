@@ -5,18 +5,21 @@ using UnityEngine;
 
 public class manager : MonoBehaviour {
 
-    private float daltatime;
-    public float Level_time = 0; //当前关卡使用的总时间，会随着游戏暂停而暂停
+    public Transform zhujue_pos;
+
+    private float daltatime; 
+    public float Level_time = 0; //当前关卡使用的总时间
     private int ji_suan_time = 5;
     
     public GameObject text1; //要被实例化的物体
     public GameObject text2;
+    public GameObject text_zhujue;
 
     public static int talk1_id = 10000; //text1的对话的ID，这个控制该说哪句话
     public static int talk2_id = 20000;
 
-
     private bool[] talk1_boll = new bool[1000]; //对话只能使用1次    
+
 
     private Vector3 npc_pian_yi;
 
@@ -30,7 +33,7 @@ public class manager : MonoBehaviour {
     public Transform 学生男;
     public Transform 建筑工;
 
-
+    
 
     void Start () {
         NPC_pos();
@@ -40,9 +43,8 @@ public class manager : MonoBehaviour {
 	void Update () {
         //Level_time = Time.timeSinceLevelLoad;
         ji_shi();
-        talk_kz();
+        talk1_kz();
 
-        
     }
 
 
@@ -56,6 +58,13 @@ public class manager : MonoBehaviour {
         }
     }
 
+    void shi_li(Object ob,Vector3 v3, Quaternion qua,int talk_b) //实例对话框和字加时间判断
+    {
+        Instantiate(ob, v3, qua);
+        talk1_boll[talk_b] = true;
+        ji_suan_time += 7;
+    }
+
     void NPC_pos() //NPC对话框弹出的位置
     {
         npc_pian_yi = new Vector3(-0.5f, 2.7f, 0);
@@ -66,76 +75,65 @@ public class manager : MonoBehaviour {
     }
 
 
-    void talk_kz() //控制弹出的对话
+    void talk1_kz() //控制弹出的对话talk1
     {
         
         if (talk1_boll[0] != true && Level_time == ji_suan_time) //学生男
         {
-            Instantiate(text1, 学生男pos, transform.rotation);
-            talk1_boll[0] = true;
-            ji_suan_time += 7;
+            shi_li(text1, 学生男pos, transform.rotation,0);            
         } 
         if(talk1_boll[1] != true && Level_time == ji_suan_time) //学生男
         {
-            Instantiate(text1, 学生男pos, transform.rotation);
-            talk1_boll[1] = true;
-            ji_suan_time += 7;
+            shi_li(text1, 学生男pos, transform.rotation,1);
+            
         }
         if (talk1_boll[2] != true && Level_time == ji_suan_time)  //家庭主妇
         {
-            Instantiate(text1, 家庭主妇pos, transform.rotation);
-            talk1_boll[2] = true;
-            ji_suan_time += 7;
+            shi_li(text1, 家庭主妇pos, transform.rotation,2);
+            
         }
 
         if (talk1_boll[3] != true && Level_time == ji_suan_time)  //私人司机
         {
-            Instantiate(text1, 私人司机pos, transform.rotation);
-            talk1_boll[3] = true;
-            ji_suan_time += 7;
+            shi_li(text1, 私人司机pos, transform.rotation,3);            
         }
 
         if (talk1_boll[4] != true && Level_time == ji_suan_time)  //建筑工
         {
-            Instantiate(text1, 建筑工pos, transform.rotation);
-            talk1_boll[4] = true;
-            ji_suan_time += 7;
+            shi_li(text1, 建筑工pos, transform.rotation,4);
+            
         }
 
         if (talk1_boll[5] != true && Level_time == ji_suan_time) //私人司机
         {
-            Instantiate(text1, 私人司机pos, transform.rotation);
-            talk1_boll[5] = true;
-            ji_suan_time += 7;
+            shi_li(text1, 私人司机pos, transform.rotation,5);
+
         }
 
         if (talk1_boll[6] != true && Level_time == ji_suan_time) //家庭妇女
         {
-            Instantiate(text1, 家庭主妇pos, transform.rotation);
-            talk1_boll[6] = true;
-            ji_suan_time += 7;
+            shi_li(text1, 家庭主妇pos, transform.rotation,6);
+           
         }
       
         if (talk1_boll[7] != true && Level_time == ji_suan_time)
         {
-            Instantiate(text1, new Vector3(8.11f, 1f, 0), transform.rotation);
-            talk1_boll[7] = true;
-            ji_suan_time += 7;
+            shi_li(text1, 家庭主妇pos, transform.rotation, 7);
+
         }
 
         if (talk1_boll[8] != true && Level_time == ji_suan_time)
         {
-            Instantiate(text1, new Vector3(8.11f, 1f, 0), transform.rotation);
-            talk1_boll[8] = true;
-            ji_suan_time += 7;
+            shi_li(text1, 家庭主妇pos, transform.rotation, 8);
+
         }
 
         if (talk1_boll[9] != true && Level_time == ji_suan_time)
         {
-            Instantiate(text1, new Vector3(8.11f, 1f, 0), transform.rotation);
-            talk1_boll[9] = true;
-            ji_suan_time += 7;
-        }
+            shi_li(text1, 家庭主妇pos, transform.rotation, 9);
 
+        }
     }
+
+
 }
