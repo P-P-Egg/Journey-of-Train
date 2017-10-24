@@ -34,7 +34,7 @@ public class talk1_nr : MonoBehaviour {
         text1.color = Color.white;
     } 
 
-    void OnMouseDown() //当鼠标点击时,记录话，销毁自己
+    void OnMouseUp() //当鼠标点击时,记录话，销毁自己
     {
         Destroy(gameObject);        
     }
