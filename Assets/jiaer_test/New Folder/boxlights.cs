@@ -2,25 +2,46 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class boxlights : scriptstest {
+public class boxlights : MonoBehaviour
+{
     public int count;
-    public GameObject go;
+    public GameObject item;//物品
+    public GameObject boxlight;//高亮物品框
+    public int blick_count=0;
     // Use this for initialization
-    private void OnMouseEnter()
+    private void OnMouseDown()
     {
-        boxlights[count].GetComponent<Transform>().Translate(0, 0, -0.1f);
-        string newtext = item_information(go.GetComponent<timepiece>().information);
-        GameObject.Find("back/itemexper").GetComponent<TextMesh>().text = newtext;
+        if (blick_count == 0)
+        {
+            boxlight.GetComponent<Transform>().Translate(0, 0, -0.1f);
+            if (item != null)
+            {
+                string newtext = item_information(item.GetComponent<timepiece>().information);
+                GameObject.Find("back/itemexper").GetComponent<TextMesh>().text = newtext;
+                item.GetComponent<timepiece>().isjubao = true;
+            }
+            blick_count++;
+        }
+        else
+        {
+            boxlight.GetComponent<Transform>().Translate(0, 0, 0.1f);
+            if (item != null)
+            {
+                GameObject.Find("back/itemexper").GetComponent<TextMesh>().text = "";
+                item.GetComponent<timepiece>().isjubao = false;
+            }
+            blick_count--;
+        }
     }
-    private void OnMouseExit()
-    {
-        boxlights[count].GetComponent<Transform>().Translate(0, 0, 0.1f);
-        GameObject.Find("back/itemexper").GetComponent<TextMesh>().text = "";
-    }
+    //private void OnMouseExit()
+    //{
+    //    boxlights[count].GetComponent<Transform>().Translate(0, 0, 0.1f);
+    //    GameObject.Find("back/itemexper").GetComponent<TextMesh>().text = "";
+    //}
     private string item_information(string example)
     {
         string a = "\n";
-        for(int i=4;i< go.GetComponent<timepiece>().information.Length+4; i+=5)
+        for(int i=4;i< item.GetComponent<timepiece>().information.Length+3; i+=5)
         {
             example = example.Insert(i, a);
         }
