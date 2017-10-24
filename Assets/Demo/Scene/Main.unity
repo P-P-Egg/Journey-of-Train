@@ -147,16 +147,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 212935072687079632, guid: e8ee15a6b38c54341af791e7940d8224,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: 146843251
-      objectReference: {fileID: 0}
-    - target: {fileID: 212935072687079632, guid: e8ee15a6b38c54341af791e7940d8224,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e8ee15a6b38c54341af791e7940d8224, type: 2}
   m_IsPrefabParent: 0
@@ -283,16 +273,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 212153843159809318, guid: 2422adfc306daec4aba8b29ecce1727a,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: 146843251
-      objectReference: {fileID: 0}
-    - target: {fileID: 212153843159809318, guid: 2422adfc306daec4aba8b29ecce1727a,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2422adfc306daec4aba8b29ecce1727a, type: 2}
   m_IsPrefabParent: 0
@@ -381,16 +361,6 @@ Prefab:
     - target: {fileID: 4564976017228258, guid: 07271b103301f7145b034f0cb97b45cb, type: 2}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212998929444513738, guid: 07271b103301f7145b034f0cb97b45cb,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: -1594863647
-      objectReference: {fileID: 0}
-    - target: {fileID: 212998929444513738, guid: 07271b103301f7145b034f0cb97b45cb,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07271b103301f7145b034f0cb97b45cb, type: 2}
@@ -602,6 +572,17 @@ Prefab:
       value: 
       objectReference: {fileID: 1103035015843784, guid: 88bb50a0e84914a459c4ab63aba0ef44,
         type: 2}
+    - target: {fileID: 114090149874331208, guid: 773f85225a895734191c42a2a44cd41e,
+        type: 2}
+      propertyPath: text_zhujue
+      value: 
+      objectReference: {fileID: 1408036201077850, guid: 9a51dd8c752d46c4f9d590cd38c1b7f7,
+        type: 2}
+    - target: {fileID: 114090149874331208, guid: 773f85225a895734191c42a2a44cd41e,
+        type: 2}
+      propertyPath: zhujue_pos
+      value: 
+      objectReference: {fileID: 1153814764}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 773f85225a895734191c42a2a44cd41e, type: 2}
   m_IsPrefabParent: 0
@@ -657,6 +638,22 @@ Transform:
   m_PrefabParentObject: {fileID: 4548239274936376, guid: e34000d07aabe6f47815e49561cc202b,
     type: 2}
   m_PrefabInternal: {fileID: 1153814763}
+--- !u!1 &1346764603 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1207046678043684, guid: 2422adfc306daec4aba8b29ecce1727a,
+    type: 2}
+  m_PrefabInternal: {fileID: 532386938}
+--- !u!114 &1346764604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1346764603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41aa33f3650317c49bdaf7985e941603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1437358426
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,6 +892,24 @@ Transform:
   m_PrefabParentObject: {fileID: 4588990216850222, guid: 7d1bd5d785817874292a42630347f81f,
     type: 2}
   m_PrefabInternal: {fileID: 2080377421}
+--- !u!1 &2067312634 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1484570693555524, guid: e34000d07aabe6f47815e49561cc202b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1153814763}
+--- !u!114 &2067312635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2067312634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4322f39014e5317428f65f0d0020d0cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zhujue_text: {fileID: 1408036201077850, guid: 9a51dd8c752d46c4f9d590cd38c1b7f7,
+    type: 2}
 --- !u!1001 &2080377421
 Prefab:
   m_ObjectHideFlags: 0

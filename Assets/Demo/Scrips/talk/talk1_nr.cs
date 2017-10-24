@@ -36,8 +36,7 @@ public class talk1_nr : MonoBehaviour {
 
     void OnMouseDown() //当鼠标点击时,记录话，销毁自己
     {
-        Destroy(gameObject);
-        
+        Destroy(gameObject);        
     }
      
     void OnDestroy() //销毁时
