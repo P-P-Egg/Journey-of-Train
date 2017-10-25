@@ -77,12 +77,12 @@ public class talk_chen_wu : MonoBehaviour {
         
         if (dui_hua_int == 2)
         {
-            text_chen_wu.text = "警惕周围的乘客，他们所说的\n每一个句话，都可能对祖国造\n成不可估量的损失。";
+            text_chen_wu.text = "警惕周围的乘客，他们携带的\n每一个物品，都可能对国家造\n成不可估量的损失。";
         }
 
         if (dui_hua_int == 3)
         {
-            text_chen_wu.text = "当你发现可疑言论，遵照铁路\n管理规定，依法举报违规乘客，\n审核局会公正判决每个举报案。";
+            text_chen_wu.text = "当你发现可疑物品，遵照铁路\n管理规定，依法举报违规物品，\n审核局会公正判决每个举报案。";
         }
 
         if (dui_hua_int == 4)
@@ -92,40 +92,17 @@ public class talk_chen_wu : MonoBehaviour {
 
         if (dui_hua_int == 5)
         {
-            text_chen_wu.text = "下面我给你演示什么是违规言\n论。";            
+            text_chen_wu.text = "以下每组物品中有1个是违禁\n品。";            
         }
         //下面放背包的信息
 
-        if (dui_hua_int == 7)
+        if (dui_hua_int == 6)
         {
-            text_chen_wu.text = "1.特瑞普将彻底控制政府。\n2.三权独立是阻止独裁的最后\n一道防火墙。";
+            text_chen_wu.text = "没事的时候多看报纸，记住，\n你的资产不能太低，我们不会\n雇佣有损国家形象的人。";
            
         }
 
-        if (dui_hua_int == 8)
-        {
-            text_chen_wu.text = "刚才第一句话不尊重总统先生，\n第二句话涉及的违规词将损害\n国家利益，明白怎么工作了吗？";
-
-        }
-
-        if (dui_hua_int == 9)
-        {
-            text_chen_wu.text = "我如何判断哪些是违规词？";
-
-        }
-
-        if (dui_hua_int == 10)
-        {
-            text_chen_wu.text = "作为国家公务人员，应当具备\n敏锐的“嗅觉”，我不想回答\n这么愚蠢的问题。";
-
-        }
-
-        if (dui_hua_int == 11)
-        {
-            text_chen_wu.text = "认真读一读铁路管理手册，\n现在立刻工作。";
-
-        }
-        if (dui_hua_int == 12) //销毁自己
+        if (dui_hua_int == 7) //销毁自己
         {
             
 

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4188041821071370}
   - component: {fileID: 61638866592796920}
   - component: {fileID: 114437118718681778}
+  - component: {fileID: 95940863596214068}
   m_Layer: 0
   m_Name: talk1
   m_TagString: Untagged
@@ -68,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1174253533543650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.41, y: -0.93, z: 0}
+  m_LocalPosition: {x: 31.43, y: -0.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4808131716040072}
@@ -159,6 +160,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.31, y: 2.8}
   m_EdgeRadius: 0
+--- !u!95 &95940863596214068
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1174253533543650}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 75005b6ef5198034faf2e05497694f69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!102 &102752087252568624
 TextMesh:
   serializedVersion: 3
@@ -179,7 +197,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: 41f687b6617cf7147b6b5c8d57b052c4, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 16777215
 --- !u!114 &114437118718681778
 MonoBehaviour:
   m_ObjectHideFlags: 1

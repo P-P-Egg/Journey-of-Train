@@ -17,9 +17,12 @@ public class manager : MonoBehaviour {
     public GameObject text2;
     public GameObject text_zhujue;
 
+    
+
     public static int talk1_id = 10000; //text1的对话的ID，这个控制该说哪句话
 
     private bool[] talk1_boll = new bool[1000]; //对话只能使用1次    
+
 
 
     private Vector3 npc_pian_yi;

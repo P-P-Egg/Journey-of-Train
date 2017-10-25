@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4917716576985034}
   - component: {fileID: 23905762538106894}
   - component: {fileID: 102817218127414180}
+  - component: {fileID: 95535882676554936}
   m_Layer: 0
   m_Name: talk2_text
   m_TagString: Untagged
@@ -159,6 +160,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.31, y: 2.8}
   m_EdgeRadius: 0
+--- !u!95 &95535882676554936
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1050340483196836}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 75005b6ef5198034faf2e05497694f69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!102 &102817218127414180
 TextMesh:
   serializedVersion: 3
@@ -181,7 +199,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: 41f687b6617cf7147b6b5c8d57b052c4, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 16777215
 --- !u!114 &114816879972414208
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -193,6 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef78c815096fa0545b614a4a17f1a409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  daltatime: 0
 --- !u!212 &212478388319450440
 SpriteRenderer:
   m_ObjectHideFlags: 1

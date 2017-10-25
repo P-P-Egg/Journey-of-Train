@@ -6,6 +6,10 @@ public class talk2_nr : MonoBehaviour {
 
     private TextMesh text2;
 
+    public float daltatime;
+
+    private Color color = new Color(255, 255, 255, 0);
+
     void Start()
     {
         text2 = gameObject.GetComponentInChildren<TextMesh>();
@@ -14,9 +18,20 @@ public class talk2_nr : MonoBehaviour {
 
     void Update()
     {
-
+       jian_bian();
         xiao_hui();
 
+    }
+
+    void jian_bian() //一个颜色渐变的功能
+    {
+        if (daltatime <= 1) // 渐变增加透明度
+        {
+            daltatime += Time.deltaTime;
+            color = new Color(255, 255, 255, daltatime);
+
+            text2.color = color;
+        }
     }
 
     void xiao_hui() //自动销毁自己
@@ -25,7 +40,7 @@ public class talk2_nr : MonoBehaviour {
 
     }
 
-    void OnMouseEnter() //鼠标进入时变成黄色
+    void OnMouseOver() //鼠标t停留时变成黄色
     {
         text2.color = Color.yellow;
 
