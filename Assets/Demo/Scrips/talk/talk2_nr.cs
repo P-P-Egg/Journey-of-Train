@@ -38,7 +38,8 @@ public class talk2_nr : MonoBehaviour {
 
     void OnMouseUp() //当鼠标点击时,记录话，销毁自己talk2_boll
     {
-        Destroy(gameObject);
+        cun_jb.jao_bao_nei_rong = text2.text;
+
     }
 
     void OnDestroy() //销毁时

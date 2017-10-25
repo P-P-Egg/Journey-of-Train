@@ -92,7 +92,7 @@ public class talk_chen_wu : MonoBehaviour {
 
         if (dui_hua_int == 5)
         {
-            text_chen_wu.text = "下面我给你演示什么是违规言论";            
+            text_chen_wu.text = "下面我给你演示什么是违规言\n论。";            
         }
         //下面放背包的信息
 
