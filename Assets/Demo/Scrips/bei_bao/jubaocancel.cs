@@ -33,6 +33,6 @@ public class jubaocancel : MonoBehaviour {
     }
     private void OnMouseDown()
     {
-        GameObject.Find("Canvas/jubaoxin").SetActive(false);
+        GameObject.FindWithTag("jubaoxin").transform.Translate(0, 30, 0);
     }
 }

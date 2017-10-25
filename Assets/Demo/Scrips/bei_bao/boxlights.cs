@@ -7,6 +7,7 @@ public class boxlights : MonoBehaviour
     public int count;
     public GameObject item;//物品
     public GameObject boxlight;//高亮物品框
+    public GameObject jubaobiaozhi;//举报标志
     public int blick_count=0;//用于自身脚本点击记录
 
     private void OnMouseDown()
@@ -15,7 +16,8 @@ public class boxlights : MonoBehaviour
         {
             if (item != null)
             {
-                item.GetComponent<timepiece>().isjubao = true;
+                item.GetComponent<timepiece>().canjubao = true;
+                jubaobiaozhi.transform.Translate(0, 0, -1f);
             }
             blick_count++;
         }
@@ -23,7 +25,8 @@ public class boxlights : MonoBehaviour
         {
             if (item != null)
             {
-                item.GetComponent<timepiece>().isjubao = false;
+                item.GetComponent<timepiece>().canjubao = false;
+                jubaobiaozhi.transform.Translate(0, 0, 1f);
             }
             blick_count--;
         }

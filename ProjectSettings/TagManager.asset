@@ -9,6 +9,8 @@ TagManager:
   - boxlight
   - dialogue
   - jubaoxinxi
+  - backpack
+  - jubaoxin
   layers:
   - Default
   - TransparentFX

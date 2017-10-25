@@ -12,6 +12,5 @@ public class cun_jb : MonoBehaviour {
 	
 
 	void Update () {
-        Debug.Log(jao_bao_nei_rong);
 	}
 }
