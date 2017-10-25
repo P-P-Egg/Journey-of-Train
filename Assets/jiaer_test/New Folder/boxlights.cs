@@ -7,9 +7,40 @@ public class boxlights : MonoBehaviour
     public int count;
     public GameObject item;//物品
     public GameObject boxlight;//高亮物品框
-    public int blick_count=0;
-    // Use this for initialization
+    public int blick_count=0;//用于自身脚本点击记录
+
     private void OnMouseDown()
+    {
+        if (blick_count == 0)
+        {
+            if (item != null)
+            {
+                item.GetComponent<timepiece>().isjubao = true;
+            }
+            blick_count++;
+        }
+        else
+        {
+            if (item != null)
+            {
+                item.GetComponent<timepiece>().isjubao = false;
+            }
+            blick_count--;
+        }
+    }
+    private void OnMouseExit()
+    {
+        if (blick_count == 0)
+        {
+            boxlight.GetComponent<Transform>().Translate(0, 0, 0.1f);
+            if (item != null)
+            {
+                GameObject.Find("beibao/itemexper").GetComponent<TextMesh>().text = "";
+                item.GetComponent<timepiece>().isjubao = false;
+            }
+        }
+    }
+    private void OnMouseEnter()
     {
         if (blick_count == 0)
         {
@@ -17,27 +48,10 @@ public class boxlights : MonoBehaviour
             if (item != null)
             {
                 string newtext = item_information(item.GetComponent<timepiece>().information);
-                GameObject.Find("back/itemexper").GetComponent<TextMesh>().text = newtext;
-                item.GetComponent<timepiece>().isjubao = true;
+                GameObject.Find("beibao/itemexper").GetComponent<TextMesh>().text = newtext;
             }
-            blick_count++;
-        }
-        else
-        {
-            boxlight.GetComponent<Transform>().Translate(0, 0, 0.1f);
-            if (item != null)
-            {
-                GameObject.Find("back/itemexper").GetComponent<TextMesh>().text = "";
-                item.GetComponent<timepiece>().isjubao = false;
-            }
-            blick_count--;
         }
     }
-    //private void OnMouseExit()
-    //{
-    //    boxlights[count].GetComponent<Transform>().Translate(0, 0, 0.1f);
-    //    GameObject.Find("back/itemexper").GetComponent<TextMesh>().text = "";
-    //}
     private string item_information(string example)
     {
         string a = "\n";
