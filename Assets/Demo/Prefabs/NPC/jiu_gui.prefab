@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4813604000559878}
   - component: {fileID: 212117704215272864}
+  - component: {fileID: 70751842629023932}
+  - component: {fileID: 114580281634360518}
   m_Layer: 0
   m_Name: jiu_gui
   m_TagString: Untagged
@@ -34,12 +36,40 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1980455091852146}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.11, y: -0.54, z: -0.6479376}
+  m_LocalPosition: {x: -19.11, y: -0.54, z: -0.1}
   m_LocalScale: {x: 0.5225166, y: 0.44882762, z: 0.46022817}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.92100006}
+--- !u!70 &70751842629023932
+CapsuleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1980455091852146}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.7, y: 0}
+  m_Size: {x: 5.3, y: 21.65}
+  m_Direction: 0
+--- !u!114 &114580281634360518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1980455091852146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d51cc717a0cc8ba448a9ec983096d01e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backpack: {fileID: 0}
+  money: 0
 --- !u!212 &212117704215272864
 SpriteRenderer:
   m_ObjectHideFlags: 1

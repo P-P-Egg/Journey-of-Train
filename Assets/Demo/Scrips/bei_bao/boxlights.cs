@@ -10,6 +10,14 @@ public class boxlights : MonoBehaviour
     public GameObject jubaobiaozhi;//举报标志
     public int blick_count=0;//用于自身脚本点击记录
 
+    public GameObject fu_lei; //挂载父类，寻找名字时始终寻找该父类的名字
+    private string fu_lei_name;
+
+    void Start()
+    {
+        fu_lei_name = fu_lei.transform.name;
+    }
+
     private void OnMouseDown()
     {
         if (blick_count == 0)
@@ -38,7 +46,7 @@ public class boxlights : MonoBehaviour
             boxlight.GetComponent<Transform>().Translate(0, 0, 0.1f);
             if (item != null)
             {
-                GameObject.Find("beibao/itemexper").GetComponent<TextMesh>().text = "";
+                GameObject.Find(fu_lei_name+"/itemexper").GetComponent<TextMesh>().text = "";
                 item.GetComponent<timepiece>().isjubao = false;
             }
         }
@@ -51,7 +59,7 @@ public class boxlights : MonoBehaviour
             if (item != null)
             {
                 string newtext = item_information(item.GetComponent<timepiece>().information);
-                GameObject.Find("beibao/itemexper").GetComponent<TextMesh>().text = newtext;
+                GameObject.Find(fu_lei_name + "/itemexper").GetComponent<TextMesh>().text = newtext;
             }
         }
     }

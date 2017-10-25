@@ -9,7 +9,7 @@ public class npcattribute : MonoBehaviour {
     {
         backpack.SetActive(true);
         Vector3 newposition= GameObject.FindWithTag("MainCamera").transform.position;
-        backpack.transform.position = new Vector3(newposition.x, newposition.y, -2);
+        backpack.transform.position = new Vector3(newposition.x, newposition.y, -4.1f);
         Time.timeScale = 0;
     }
 }
