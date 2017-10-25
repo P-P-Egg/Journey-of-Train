@@ -84,7 +84,9 @@ public class manager : MonoBehaviour {
         
         if (talk1_boll[0] != true && Level_time == ji_suan_time) 
         {
-            shi_li(text1, 学生男pos, transform.rotation,0);            
+            shi_li(text1, 学生男pos, transform.rotation,0);  
+            
+                      
         } 
         if(talk1_boll[1] != true && Level_time == ji_suan_time) 
         {
