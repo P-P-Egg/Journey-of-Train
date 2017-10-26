@@ -30,10 +30,10 @@ public class bao_zhi : MonoBehaviour {
 
 	}
 
-    void ju_li() //判断距离
+    void ju_li()
     {
        
-        ju_li_x = Vector3.Distance(zhu_jue.position, transform.position); 
+        ju_li_x = Vector3.Distance(zhu_jue.position, transform.position); ;
     }
 
     void OnMouseDown()

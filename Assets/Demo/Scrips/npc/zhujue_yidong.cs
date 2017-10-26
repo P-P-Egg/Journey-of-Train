@@ -45,7 +45,6 @@ public class zhujue_yidong : MonoBehaviour {
 
 	void Update () {
 
-        
 
         if (manager.talk1_bool_js || manager2.talk2_bool_js)
         {
