@@ -8,7 +8,6 @@ public class jubao : MonoBehaviour {
     private Vector3 originscale;
     private float xmax;
     private float ymax;
-
     private Vector3 change;
 
 
@@ -47,20 +46,20 @@ public class jubao : MonoBehaviour {
                 GameObject.FindWithTag("jubaoxinxi").GetComponent<TextMesh>().text += jubaowu.GetComponent<timepiece>().name + " ";
                 if (jubaowu.GetComponent<timepiece>().rightjubao)
                 {
-                    GameObject.FindWithTag("jubaoxinxi").GetComponent<TextMesh>().text += "举报成功\n";
+                    GameObject.FindWithTag("jubaoxinxi").GetComponent<TextMesh>().text += "<color=#228B22>举报成功</color>\n";
+                    GameObject.Find("jubaoscripts").GetComponent<jubaoscripts>().wrapcount++;
                 }
                 else
                 {
-                    GameObject.FindWithTag("jubaoxinxi").GetComponent<TextMesh>().text += "举报失败\n";
+                    GameObject.FindWithTag("jubaoxinxi").GetComponent<TextMesh>().text += "<color=#CD0000>举报失败</color>\n";
+                    GameObject.Find("jubaoscripts").GetComponent<jubaoscripts>().wrapcount++;
                 }
                 jubaowu.GetComponent<timepiece>().isjubao = true;
             }
         }
-
     }
     private void OnMouseUp()
     {
         transform.localScale = change;
     }
-
 }
