@@ -6,7 +6,7 @@ public class bao_zhi_animator : MonoBehaviour {
 
     public static bool bao_zhi_animator_bool; //是否开启
 
-    public static bool bao_zhi_guan_bool = true; //关报纸
+    public static bool bao_zhi_guan_bool; //关报纸
 
 
  
@@ -27,6 +27,10 @@ public class bao_zhi_animator : MonoBehaviour {
         if (bao_zhi_guan_bool)
         {
             transform.position = new Vector3(50f, 21.3f, -5f);
+
+            //开始启动
+            manager.talk1_bool_js = true;
+            manager2.talk2_bool_js = true;
 
             bao_zhi_guan_bool = false;
         }

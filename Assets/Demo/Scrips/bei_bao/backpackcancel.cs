@@ -28,7 +28,11 @@ public class backpackcancel : MonoBehaviour {
     {
 
         GameObject.FindWithTag("backpack").SetActive(false);
-        Time.timeScale = 1;
+
+        manager.talk1_bool_js = true;
+        manager2.talk2_bool_js = true;
+
+        //Time.timeScale = 1;
     }
 
     private void OnMouseExit()

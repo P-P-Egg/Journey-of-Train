@@ -32,5 +32,7 @@ public class mu_1 : MonoBehaviour {
     {
         transform.position = new Vector3(14.47f, 0.86f, 2f);
         bao_zhi_animator.bao_zhi_guan_bool = true;
+
+       
     }
 }
