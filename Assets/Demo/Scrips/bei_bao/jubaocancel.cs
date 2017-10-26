@@ -34,5 +34,6 @@ public class jubaocancel : MonoBehaviour {
     private void OnMouseDown()
     {
         GameObject.FindWithTag("jubaoxin").transform.Translate(0, 30, 0);
+        Time.timeScale = 1;
     }
 }
