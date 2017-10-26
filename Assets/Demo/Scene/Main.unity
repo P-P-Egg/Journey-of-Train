@@ -257,7 +257,7 @@ Transform:
   m_LocalPosition: {x: -3.85, y: 3.39, z: -0.1}
   m_LocalScale: {x: 1.3185931, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1056369331}
+  m_Father: {fileID: 1056369332}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!102 &55487101
@@ -979,7 +979,7 @@ Transform:
   m_LocalPosition: {x: 24.9, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1056369331}
+  - {fileID: 1056369332}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1387,9 +1387,10 @@ GameObject:
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 1056369331}
+  - component: {fileID: 1056369332}
   - component: {fileID: 1056369330}
   - component: {fileID: 1056369329}
+  - component: {fileID: 1056369331}
   m_Layer: 0
   m_Name: jubao
   m_TagString: jubaoxin
@@ -1450,21 +1451,32 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!4 &1056369331
-Transform:
+--- !u!222 &1056369331
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1056369328}
+--- !u!224 &1056369332
+RectTransform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1056369328}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.300001, y: 22.3, z: 5}
-  m_LocalScale: {x: 1.2618738, y: 2.1046958, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
+  m_LocalScale: {x: 1.2618738, y: 2.1310046, z: 1}
   m_Children:
   - {fileID: 55487100}
   - {fileID: 1734671701}
   m_Father: {fileID: 707291133}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 14.300001, y: 22.5}
+  m_SizeDelta: {x: 19.2, y: 11.303}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1153814763
 Prefab:
   m_ObjectHideFlags: 0
@@ -1857,7 +1869,7 @@ Transform:
   m_LocalPosition: {x: 3.42, y: 4.33, z: -0.1}
   m_LocalScale: {x: 0.4255633, y: 0.2551472, z: 0.5370072}
   m_Children: []
-  m_Father: {fileID: 1056369331}
+  m_Father: {fileID: 1056369332}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1734671702
