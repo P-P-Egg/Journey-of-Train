@@ -7,7 +7,6 @@ public class npcattribute : MonoBehaviour {
 
     public GameObject backpack;
     public int money;
-
     private bool dian_ji;  //点击自己后
     private float ju_li_x;// 主角的位置
 
@@ -59,5 +58,16 @@ public class npcattribute : MonoBehaviour {
 
         ju_li_x = Vector3.Distance(z_j_pos.position, transform.position);
     }
-        
+
+    private void OnMouseEnter()
+    {
+        GameObject.FindWithTag("money").transform.position = new Vector3(transform.position.x-1, transform.position.y +7 , -5);
+        GameObject.FindWithTag("money").GetComponent<TextMesh>().text="<color=#EEEE00>$</color>"+money;
+    }
+    private void OnMouseExit()
+    {
+        GameObject.FindWithTag("money").transform.Translate(100, 100, 0);
+        GameObject.FindWithTag("money").GetComponent<TextMesh>().text = "";
+    }
+
 }

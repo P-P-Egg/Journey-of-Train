@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 9adedd43879952640b5038c11cb04b2f
+timeCreated: 1509042678
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: SF Scribbled Sans
+  fontNames:
+  - SF Scribbled Sans
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

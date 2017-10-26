@@ -9,9 +9,12 @@ public class jubao : MonoBehaviour {
     private float xmax;
     private float ymax;
     private Vector3 change;
-
-
+    private houtai Houtai;
     // Use this for initialization
+    private void Awake()
+    {
+        Houtai = GameObject.FindWithTag("houtai").GetComponent<houtai>();
+    }
     void Start () {
         originscale = transform.localScale;
         xmax = 1.2f * transform.localScale.x;
@@ -46,13 +49,13 @@ public class jubao : MonoBehaviour {
                 GameObject.FindWithTag("jubaoxinxi").GetComponent<TextMesh>().text += jubaowu.GetComponent<timepiece>().name + " ";
                 if (jubaowu.GetComponent<timepiece>().rightjubao)
                 {
-                    GameObject.FindWithTag("jubaoxinxi").GetComponent<TextMesh>().text += "\n                              <color=#228B22>举报成功</color>\n";
-                    GameObject.Find("jubaoscripts").GetComponent<jubaoscripts>().wrapcount++;
+                    Houtai.jubaochenggong++;
+                    Houtai.shouru += jubaowu.GetComponent<timepiece>().jubaofankui;
                 }
                 else
                 {
-                    GameObject.FindWithTag("jubaoxinxi").GetComponent<TextMesh>().text += "\n                              <color=#CD0000>举报失败</color>\n";
-                    GameObject.Find("jubaoscripts").GetComponent<jubaoscripts>().wrapcount++;
+                    Houtai.jubaochenggong++;
+                    Houtai.shouru += jubaowu.GetComponent<timepiece>().jubaofankui;
                 }
                 jubaowu.GetComponent<timepiece>().isjubao = true;
             }
