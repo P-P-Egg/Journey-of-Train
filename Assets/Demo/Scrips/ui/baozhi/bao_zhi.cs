@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class bao_zhi : MonoBehaviour {
-
     public Transform zhu_jue;
 
-    private bool dian_ji;
+    private bool dian_ji;  //点击自己后
 
     private float zhu_jue_x;
 
@@ -21,13 +20,14 @@ public class bao_zhi : MonoBehaviour {
 	void Update () {
         ju_li();
 
-        if (dian_ji && ju_li_x <= 1f)
+
+        if (dian_ji && ju_li_x <= 3.5f)
         {
             kao_jin();
             dian_ji = false;
         }
 
-        Debug.Log(ju_li_x);
+
 	}
 
     void ju_li()

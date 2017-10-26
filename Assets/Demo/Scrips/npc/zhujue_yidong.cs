@@ -127,7 +127,7 @@ public class zhujue_yidong : MonoBehaviour {
         }
         if (chushi_ps)  //角色移动到鼠标位置
         {
-            if (dian_pos.x - transform.position.x > 0.2f)  //如果点击的位置大于角色位置
+            if (dian_pos.x - transform.position.x > 2f)  //如果点击的位置大于角色位置
             {
                 
                 transform.Translate(Vector3.right * Time.deltaTime * jue_se_speed, Space.World);
@@ -137,7 +137,7 @@ public class zhujue_yidong : MonoBehaviour {
                 left = false;
             }
 
-            if (dian_pos.x - transform.position.x < 0) //如果点击位置小于角色位置
+            if (dian_pos.x - transform.position.x < -2) //如果点击位置小于角色位置
             {
                 transform.Translate(Vector3.left * Time.deltaTime * jue_se_speed, Space.World);
 
