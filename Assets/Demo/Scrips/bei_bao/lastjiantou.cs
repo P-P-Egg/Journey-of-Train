@@ -10,9 +10,9 @@ public class lastjiantou : MonoBehaviour {
     }
     private void OnMouseDown()
     {
-        GameObject.Find("Main Camera/jubao/New Text").GetComponent<TextMesh>().text = GameObject.Find("jubaoscripts").GetComponent<jubaoscripts>().textrecode[count - 1].text;
+        GameObject.Find("Main Camera/jubao/New Text").GetComponent<TextMesh>().text = GameObject.Find("jubaoscripts").GetComponent<jubaoscripts>().textrecode[count - 1].GetComponent<TextMesh>().text;
         print(GameObject.Find("Main Camera/jubao/New Text").GetComponent<TextMesh>().text);
-        print(GameObject.Find("jubaoscripts").GetComponent<jubaoscripts>().textrecode[count - 1].text);
+        print(GameObject.Find("jubaoscripts").GetComponent<jubaoscripts>().textrecode[count - 1].GetComponent<TextMesh>().text);
         print("hehe");
     }
 }

@@ -46,12 +46,12 @@ public class jubao : MonoBehaviour {
                 GameObject.FindWithTag("jubaoxinxi").GetComponent<TextMesh>().text += jubaowu.GetComponent<timepiece>().name + " ";
                 if (jubaowu.GetComponent<timepiece>().rightjubao)
                 {
-                    GameObject.FindWithTag("jubaoxinxi").GetComponent<TextMesh>().text += "<color=#228B22>举报成功</color>\n";
+                    GameObject.FindWithTag("jubaoxinxi").GetComponent<TextMesh>().text += "\n                              <color=#228B22>举报成功</color>\n";
                     GameObject.Find("jubaoscripts").GetComponent<jubaoscripts>().wrapcount++;
                 }
                 else
                 {
-                    GameObject.FindWithTag("jubaoxinxi").GetComponent<TextMesh>().text += "<color=#CD0000>举报失败</color>\n";
+                    GameObject.FindWithTag("jubaoxinxi").GetComponent<TextMesh>().text += "\n                              <color=#CD0000>举报失败</color>\n";
                     GameObject.Find("jubaoscripts").GetComponent<jubaoscripts>().wrapcount++;
                 }
                 jubaowu.GetComponent<timepiece>().isjubao = true;
