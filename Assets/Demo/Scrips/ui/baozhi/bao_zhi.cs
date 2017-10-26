@@ -24,8 +24,16 @@ public class bao_zhi : MonoBehaviour {
         if (dian_ji && ju_li_x <= 3.5f)
         {
             kao_jin();
+
+            //对话时间暂停 附带角色不能移动
+            manager.talk1_bool_js = false;
+            manager2.talk2_bool_js = false;
+            zhujue_yidong.zhu_jue_dong = false;
+
             dian_ji = false;
         }
+
+        
 
 
 	}
@@ -38,7 +46,10 @@ public class bao_zhi : MonoBehaviour {
 
     void OnMouseDown()
     {
+        
+        zhujue_yidong.zhu_jue_dong = true;
         dian_ji = true;
+        
         
     }
 

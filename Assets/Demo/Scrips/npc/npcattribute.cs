@@ -31,22 +31,25 @@ public class npcattribute : MonoBehaviour {
             backpack.transform.position = new Vector3(newposition.x, newposition.y, -4.1f);
 
             //对话时间暂停 附带角色不能移动
-            manager.talk1_bool_js = true;
-            manager2.talk2_bool_js = true;
-
-
+            manager.talk1_bool_js = false;
+            manager2.talk2_bool_js = false;
+            zhujue_yidong.zhu_jue_dong = false; 
 
             //Time.timeScale = 0;
 
             dian_ji = false;
         }
+
+       
         
     }
 
     
     private void OnMouseDown()
     {
-        dian_ji = true;      
+        zhujue_yidong.zhu_jue_dong = true;
+        dian_ji = true;
+      
     }
 
 
