@@ -6,7 +6,7 @@ public class bao_zhi_animator : MonoBehaviour {
 
     public static bool bao_zhi_animator_bool; //是否开启
 
-    public static bool bao_zhi_guan_bool = true;
+    public static bool bao_zhi_guan_bool = true; //关报纸
 
 
  
